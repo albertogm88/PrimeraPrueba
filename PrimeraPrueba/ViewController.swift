@@ -10,8 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func boton(sender: AnyObject) {
+        miEtiqueta.text = "prueba funcionamiento";
+    }
+    @IBOutlet var miEtiqueta: UILabel!
+    @IBOutlet var imagen: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var image: UIImage = UIImage(named: "alien")!
+        imagen = UIImageView(image: image)
+        imagen!.frame = CGRectMake(300,300,100,200)
+        self.view.addSubview(imagen!)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +29,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
